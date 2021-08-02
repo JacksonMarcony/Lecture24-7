@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="https://icon-library.com/images/icon-logo-png/icon-logo-png-11.jpg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <title>Leacture 24/7</title>
+</head>
+<style type="text/css">
+  body {
+    background-color: #F4f4f4 !important;
+  }
+
+  body>.grid {
+    height: 100%;
+  }
+
+  .image {
+    margin-top: -100px;
+  }
+
+  .column {
+    max-width: 450px;
+  }
+</style>
+
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root">
+  </div>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous">
+    </script>
+  <script>
+    $(document)
+      .ready(function () {
+        $('.ui.checkbox')
+          .checkbox()
+          ;
+        $('.ui.form')
+          .form({
+            fields: {
+              email: {
+                identifier: 'email',
+                rules: [
+                  {
+                    type: 'empty',
+                    prompt: 'Please enter your e-mail'
+                  },
+                  {
+                    type: 'email',
+                    prompt: 'Please enter a valid e-mail'
+                  }
+                ]
+              },
+              password: {
+                identifier: 'password',
+                rules: [
+                  {
+                    type: 'empty',
+                    prompt: 'Please enter your password'
+                  },
+                  {
+                    type: 'length[6]',
+                    prompt: 'Your password must be at least 6 characters'
+                  }
+                ]
+              }
+            }
+          })
+          ;
+      })
+      ;
+  </script>
+  <script src="semantic/dist/semantic.min.js"></script>
+</body>
+
+</html>
